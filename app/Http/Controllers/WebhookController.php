@@ -37,7 +37,12 @@ class WebhookController extends Controller
 
     public function respondToRoomLookup($meaning)
     {
-        $room = $meaning->room[0]->value;
+        $room = $meaning->room[0]->value ?? null;
+        
+        if(is_null($root)){
+           return 'I did not understand that. If you want to help extend me, visit https://github.com/niclashedam/itu-chatbot';   
+        }
+        
         $events = $this->getEvents()->filter(function ($event) use ($room) {
             return str_contains($event->location, $room);
         })->sortBy('dtstart');
