@@ -32,8 +32,6 @@ class WebhookController extends Controller
                 break;
         }
 
-        dd($response);
-
         $this->sendMessage($response, $message->senderId);
     }
 
