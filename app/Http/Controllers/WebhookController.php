@@ -39,7 +39,7 @@ class WebhookController extends Controller
     {
         $room = $meaning->room[0]->value ?? null;
         
-        if(is_null($root)){
+        if(is_null($room)){
            return 'I did not understand that. If you want to help extend me, visit https://github.com/niclashedam/itu-chatbot';   
         }
         
