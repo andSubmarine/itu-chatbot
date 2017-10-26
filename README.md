@@ -7,10 +7,15 @@ A little helper for all students and employees at the [IT-University of Copenhag
 In the current version, the chatbot is able to answer room related questions like:
 
 `Is room 3A52 available?`
+
 `Can I use room 5A12 tomoorow at noon?`
 
+## Usage
+You can always contact the chatbot at [https://m.me/itu-chatbot](https://m.me/itu-chatbot);
+
 ## Worth knowing
-This projected is sponsored by [Hostly](https://hostly.dk), which is hosting the chatbot and it's source code!
+This projected is sponsored by [Hostly](https://hostly.dk), who is hosting the chatbot!
+
 The chatbot uses Wit.ai to parse and extract meaning of messages. You can see and fork the chatbot parsing functionalities [overthere](https://wit.ai/NiclasHedam/itu-chatbot).
 
 ## Contributing
