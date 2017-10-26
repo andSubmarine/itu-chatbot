@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Traits\Listens;
@@ -38,15 +39,14 @@ class WebhookController extends Controller
     public function respondToRoomLookup($meaning)
     {
         $room = $meaning->room[0]->value ?? null;
-        
-        if(is_null($room)){
-           return 'I did not understand that. If you want to help extend me, visit https://github.com/niclashedam/itu-chatbot';   
+
+        if (is_null($room)) {
+            return 'I did not understand that. If you want to help extend me, visit https://github.com/niclashedam/itu-chatbot';
         }
-        
+
         $events = $this->getEvents()->filter(function ($event) use ($room) {
             return str_contains($event->location, $room);
         })->sortBy('dtstart');
-
 
         $now = !isset($meaning->datetime);
         $time = $now ? Carbon::now() : new Carbon($meaning->datetime[0]->value);
@@ -67,23 +67,25 @@ class WebhookController extends Controller
 
         if (!$time->between($start, $end)) {
             if (!$now) {
-                return sprintf('Room \'%s\' is free at ' . $time->format('d/m H:i'), $room);
+                return sprintf('Room \'%s\' is free at '.$time->format('d/m H:i'), $room);
             }
-            return sprintf('Room \'%s\' is free until ' . $start->diffForHumans(), $room);
+
+            return sprintf('Room \'%s\' is free until '.$start->diffForHumans(), $room);
         } else {
             if (!$now) {
-                return sprintf('Room \'%s\' is booked at ' . $time->format('d/m H:i'), $room);
+                return sprintf('Room \'%s\' is booked at '.$time->format('d/m H:i'), $room);
             }
-            return sprintf('Room \'%s\' is booked until ' . $end->diffForHumans(), $room);
+
+            return sprintf('Room \'%s\' is booked until '.$end->diffForHumans(), $room);
         }
     }
-
 
     private function getEvents()
     {
         return Cache::remember('ics', 60, function () {
-            $studyActivities = collect((new ICal)->initUrl('https://dk.timeedit.net/web/itu/db1/public/ri6Q7Z6QQw0Z5gQ9f50on7Xx5YY00ZQ1ZYQycZw.ics')->events());
-            $activities = collect((new ICal)->initUrl('https://dk.timeedit.net/web/itu/db1/public/ri6g7058yYQZXxQ5oQgZZ0vZ56Y1Q0f5c0nZQwYQ.ics')->events());
+            $studyActivities = collect((new ICal())->initUrl('https://dk.timeedit.net/web/itu/db1/public/ri6Q7Z6QQw0Z5gQ9f50on7Xx5YY00ZQ1ZYQycZw.ics')->events());
+            $activities = collect((new ICal())->initUrl('https://dk.timeedit.net/web/itu/db1/public/ri6g7058yYQZXxQ5oQgZZ0vZ56Y1Q0f5c0nZQwYQ.ics')->events());
+
             return $studyActivities->merge($activities);
         });
     }

@@ -1,7 +1,7 @@
 # ITU-Chatbot
-[![Build Status](https://scrutinizer-ci.com/g/NiclasHedam/itu-chatbot/badges/build.png?b=master)](https://scrutinizer-ci.com/g/NiclasHedam/itu-chatbot/build-status/master)
-[![Code Coverage](https://scrutinizer-ci.com/g/NiclasHedam/itu-chatbot/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/NiclasHedam/itu-chatbot/?branch=master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/NiclasHedam/itu-chatbot/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/NiclasHedam/itu-chatbot/?branch=master)
+[![Build Status](https://travis-ci.org/NiclasHedam/itu-chatbot.svg?branch=master)](https://travis-ci.org/NiclasHedam/itu-chatbot)
+[![Coverage Status](https://coveralls.io/repos/github/NiclasHedam/itu-chatbot/badge.svg?branch=master)](https://coveralls.io/github/NiclasHedam/itu-chatbot?branch=master)
+
 
 A little helper for all students and employees at the [IT-University of Copenhagen](https://itu.dk).
 In the current version, the chatbot is able to answer room related questions like:

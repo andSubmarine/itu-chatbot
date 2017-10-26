@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Traits;
 
 use GuzzleHttp\Client;
@@ -11,7 +12,7 @@ trait Responds
             'timeout'  => 5,
         ]);
 
-        $guzzle->request('POST', 'https://graph.facebook.com/v2.6/me/messages?access_token=' . env('MESSENGER_KEY'), [
+        $guzzle->request('POST', 'https://graph.facebook.com/v2.6/me/messages?access_token='.env('MESSENGER_KEY'), [
             'json' => [
                 'recipient' => [
                     'id' => $id,
