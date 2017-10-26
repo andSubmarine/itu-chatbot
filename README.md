@@ -11,7 +11,7 @@ In the current version, the chatbot is able to answer room related questions lik
 `Can I use room 5A12 tomoorow at noon?`
 
 ## Usage
-You can always contact the chatbot at [https://m.me/itu-chatbot](https://m.me/itu-chatbot);
+You can always contact the chatbot at [https://m.me/itu-chatbot](https://m.me/itu-chatbot)
 
 ## Worth knowing
 This projected is sponsored by [Hostly](https://hostly.dk), who is hosting the chatbot!
@@ -26,7 +26,7 @@ The chatbot uses Wit.ai to parse and extract meaning of messages. You can see an
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
 
-I'll obviously help with integrating the changes to the wit.ai chatbot and deploy it to Hostly.
+I'll obviously help with integrating the changes to the wit.ai core and deploy it.
 
 ## Credits
 
