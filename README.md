@@ -14,7 +14,7 @@ In the current version, the chatbot is able to answer room related questions lik
 You can always contact the chatbot at [https://m.me/itu-chatbot](https://m.me/itu-chatbot)
 
 ## Worth knowing
-This projected is sponsored by [Hostly](https://hostly.dk), who is hosting the chatbot!
+This project is sponsored by [Hostly](https://hostly.dk), who is hosting the chatbot!
 
 The chatbot uses Wit.ai to parse and extract meaning of messages. You can see and fork the chatbot parsing functionalities [overthere](https://wit.ai/NiclasHedam/itu-chatbot).
 
